@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+:root {
+    --rubik: 'Rubik', sans-serif;
+    --border: 0em solid transparent;
+    --background: rgb(224, 229, 236);
+}
+
+/*Main container*/
+div.sign-in-container {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: var(--border);
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background);
+}
+
+/*Form container*/
+div.sign-in-container form.sign-in-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-flow: column;
+    margin: 0;
+    padding: 0;
+    border: var(--border);
+    border-radius: 8px;
+    width: 30%;
+    height: 75%;
+    background-color: var(--background);
+    box-shadow: 9px 9px 16px rgb(163,177,198,0.6), 
+                -9px -9px 16px  rgba(255,255,255, 0.5);
+}
+
+/*Form header*/
+form.sign-in-form span.sign-in-header {
+    margin: 10% auto 8% auto;
+    padding: 0;
+    border: var(--border);
+    font-family: var(--rubik);
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+/*Input label*/
+form.sign-in-form label.label {
+    margin: 0 0 0.5% 10%;
+    padding: 0;
+    border: var(--border);
+    font-family: var(--rubik);
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/*Input field*/
+form.sign-in-form input.input {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 auto;
+    padding-left: 2%;
+    border: var(--border);
+    border-radius: 4px;
+    width: 80%;
+    height: 8%;
+    font-family: var(--rubik);
+    font-size: 1.1em;
+    background-color: rgba(255,255,255, 1);
+    outline: none;
+    transition: 0.4s linear;
+}
+
+form.sign-in-form input.input:focus {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/*Input field error*/
+form.sign-in-form span.error {
+    margin: 0 0 1% 10%;
+    height: 5%;
+    font-family: var(--rubik);
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    color: rgb(255, 51, 51);
+}
+
+form.sign-in-form span.error.hide {
+    opacity: 1;
+}
+
+form.sign-in-form span.error.show {
+    animation: showError 0.2s linear forwards;
+}
+
+/*Sign-up button*/
+form.sign-in-form button.btn {
+    margin: 2% auto;
+    padding: 0;
+    border: var(--border);
+    border-radius: 4px;
+    width: 60%;
+    height: 11%;
+    font-family: var(--rubik);
+    font-size: 1.6em;
+    font-weight: bold;
+    letter-spacing: 0.09em;
+    color: rgb(255, 255, 255);
+    background-color: rgb(26, 26, 26);
+    outline: none;
+    transition: 0.4s linear;
+}
+
+form.sign-in-form button.btn:hover {
+    color: rgb(26, 26, 26);
+    background-color: rgba(26, 26, 26, 0.5);
+    outline: none;
+}
+
+/*Sign-in link*/
+form.sign-in-form span.sign-up-link {
+    margin: 3% auto;
+    padding: 0;
+    border: var(--border);
+    border-radius: 4px;
+    font-family: var(--rubik);
+    font-size: 1em;
+    letter-spacing: 0.09em;
+    color: rgb(26, 26, 26);
+}
+
+span.sign-up-link a {
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(26, 26, 26);
+}
+
+/*Animation*/
+@keyframes showError {
+    from {opacity: 0;}
+    to {opacity: 1}
+}
